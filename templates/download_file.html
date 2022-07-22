@@ -1,0 +1,18 @@
+{% for message in get_flashed_messages() %}
+  <p style="color: red;">{{ message }}</p>
+{% endfor %}
+
+
+<!doctype html>
+    <title>Загрузить новый файл</title>
+    <h1>Загрузить новый файл</h1>
+    <form method=post enctype=multipart/form-data>
+      <input type=file name='file' multiple>
+      <select name=operator_code>
+        <option value="SE">SE</option>
+        <option value="GAZPROM">GAZPROM</option>
+        <option value="TEPLO">TEPLO</option>
+      </select>
+      <input type=submit value=Upload>
+    </form>
+    </html>
